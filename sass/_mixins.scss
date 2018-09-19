@@ -1,0 +1,14 @@
+@mixin bgPos{
+    background-position:center;
+    background-size: cover;
+}
+
+@mixin btnStyle($font-color){
+    color: $font-color;
+    padding:15px 25px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    border:3px solid $main-color;
+    text-transform: uppercase;
+    background-color: transparent;
+}

@@ -1,0 +1,7 @@
+@keyframes movingArrow{
+    from{
+        transform: translateY(-25%);
+    }to{
+        transform: translateY(25%);
+    }
+}

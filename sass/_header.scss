@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Lato',
+        sans-serif;
+    font-size: 10px;
+    color: $main-color;
+    height: 400vh;
+}
+
+header {
+    height: 100vh;
+    position: relative;
+    background-image: url("https://cdn.pixabay.com/photo/2018/09/16/11/46/clock-3681303_960_720.jpg");
+    @include bgPos;
+    &::before{
+        content: "";
+        display: block;
+        position: absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height: 100%;
+        background-color: rgba(0,0,0,.8);
+    }
+    .logo {
+        position: absolute;
+        top: 5%;
+        left: 5%;
+        font-size: 8rem;
+    }
+
+    h1 {
+        position: absolute;
+        top: 50%;
+        left: 2%;
+        width: 90%;
+        text-align: center;
+        transform: translateY(-50%);
+        font-size: 16rem;
+        font-weight: 900;
+
+        background-image: linear-gradient(30deg,
+            rgba(0, 248, 165, 0.774),
+            rgba(0, 214, 221, 0.3) 50%,
+            rgba(3, 115, 189, 0.774) 100%),
+            url("https://cdn.pixabay.com/photo/2015/06/08/15/06/new-york-city-801867_960_720.jpg");
+        @include bgPos;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+
+    nav {
+        position: absolute;
+        top: 7%;
+        right: 8%;
+        width: 40%;
+
+        ul {
+            width: 100%;
+            display: flex;
+            list-style: none;
+            justify-content: space-around;
+
+            li {
+                flex-basis: 20%;
+                text-align: center;
+                a {
+                    display: block;
+                    text-decoration: none;
+                    color: $main-color;
+                    font-size: 1.8rem;
+                    font-weight: 700;
+                    transition: all .3s;
+
+                    &:hover {
+                        color: $secondary-color;
+                    }
+                }
+            }
+        }
+    }
+    .headerScroller{
+        position: absolute;
+        bottom:5%;
+        left:40%;
+        right: 40%;
+        text-align: center;
+        font-size: 2.4rem;
+        & i{
+            display: block;
+            color: $secondary-color;
+            margin-bottom: 10px;
+            font-size: 2.8rem;
+            animation: movingArrow .8s ease-in-out both infinite alternate;
+        }
+       
+    }
+}
