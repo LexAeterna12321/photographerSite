@@ -9,13 +9,13 @@ html {
         sans-serif;
     font-size: 10px;
     color: $main-color;
-    height: 400vh;
 }
 
 header {
     height: 100vh;
     position: relative;
-    background-image: url("https://cdn.pixabay.com/photo/2018/09/16/11/46/clock-3681303_960_720.jpg");
+    background-image: radial-gradient(rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.9)),
+    url("https://cdn.pixabay.com/photo/2018/09/16/11/46/clock-3681303_960_720.jpg");
     @include bgPos;
     &::before{
         content: "";
@@ -54,35 +54,8 @@ header {
         color: transparent;
     }
 
-    nav {
-        position: absolute;
-        top: 7%;
-        right: 8%;
-        width: 40%;
-
-        ul {
-            width: 100%;
-            display: flex;
-            list-style: none;
-            justify-content: space-around;
-
-            li {
-                flex-basis: 20%;
-                text-align: center;
-                a {
-                    display: block;
-                    text-decoration: none;
-                    color: $main-color;
-                    font-size: 1.8rem;
-                    font-weight: 700;
-                    transition: all .3s;
-
-                    &:hover {
-                        color: $secondary-color;
-                    }
-                }
-            }
-        }
+    .headerNav{
+        @include nav;
     }
     .headerScroller{
         position: absolute;
