@@ -3,7 +3,7 @@
     background-size: cover;
 }
 
-@mixin btnStyle($font-color){
+@mixin btnStyle($font-color,$hover-color){
     color: $font-color;
     padding:15px 25px;
     font-size: 1.4rem;
@@ -11,4 +11,43 @@
     border:3px solid $main-color;
     text-transform: uppercase;
     background-color: transparent;
+    cursor: pointer;
+    transition: $trsTime;
+    &:hover{
+        color: $hover-color;
+    }
+}
+
+@mixin nav{
+    & {
+        position: absolute;
+        top: 7%;
+        right: 8%;
+        width: 40%;
+
+        & ul {
+            width: 100%;
+            display: flex;
+            list-style: none;
+            justify-content: space-around;
+
+           & li {
+                flex-basis: 20%;
+                text-align: center;
+
+                & a {
+                    display: block;
+                    text-decoration: none;
+                    color: $main-color;
+                    font-size: 1.8rem;
+                    font-weight: 700;
+                    transition: $trsTime;
+
+                    &:hover {
+                        color: $secondary-color;
+                    }
+                }
+            }
+        }
+    }
 }
