@@ -5,6 +5,10 @@
     div:first-child{
         flex-basis: 40%;
         background-color: $main-color;
+        img{
+            width:100%;
+            transform: translateX(35%);
+        }
     }
     div:last-child{
         background-color: $third-color;
