@@ -14,8 +14,8 @@ html {
 header {
     height: 100vh;
     position: relative;
-    background-image: radial-gradient(rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.9)),
-    url("https://cdn.pixabay.com/photo/2018/09/16/11/46/clock-3681303_960_720.jpg");
+    background-image: radial-gradient(rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 1)),
+    url("../img/clock.jpg");
     @include bgPos;
     &::before{
         content: "";
@@ -48,7 +48,7 @@ header {
             rgba(0, 248, 165, 0.774),
             rgba(0, 214, 221, 0.3) 50%,
             rgba(3, 115, 189, 0.774) 100%),
-            url("https://cdn.pixabay.com/photo/2015/06/08/15/06/new-york-city-801867_960_720.jpg");
+            url("../img/nyc.jpg");
         @include bgPos;
         -webkit-background-clip: text;
         color: transparent;
