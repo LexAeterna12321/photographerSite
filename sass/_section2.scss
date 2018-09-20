@@ -5,6 +5,16 @@
     div:first-child{
         flex-basis: 40%;
         background-color: $main-color;
+        position: relative;
+        top:0;
+        left:0;
+        img{
+            position: absolute;
+            height:100%;
+            transform: translateX(35%);
+            bottom:-15%;
+            right:0;
+        }
     }
     div:last-child{
         background-color: $third-color;
